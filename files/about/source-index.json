@@ -1,0 +1,488 @@
+[
+  {
+    "source_id": "official_first_ice_2026",
+    "kind": "LOCAL_ORIGINAL",
+    "status": "Локальный оригинал проверен",
+    "checked_at": "2026-10-23T11:35:35.093935+00:00",
+    "why_it_matters": "Расписание Калуга 23–24 октября, блок 2-й юношеский 13:30–15:15, арена «Космос»",
+    "local_path": "files/sources/official_first_ice_2026.txt",
+    "sha256": "6a69b2b76a0e2a3ac24cf6e1d7c6637d9f844ad78d7825478bb020e81392c3b9",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "official_kondrovo",
+    "kind": "OFFICIAL_URL",
+    "status": "Скачан HTTP 200; страницы 1–2 сверены визуально",
+    "checked_at": "2026-10-23T11:44:09.726190+00:00",
+    "why_it_matters": "Официальный PDF судей, стр.2; проверено по визуальному снимку веб-источника; сам PDF не входит в архив: из контейнера не удалось скачать",
+    "local_path": "files/protocols/2026-10-17_autumn-leaves.pdf",
+    "sha256": "a695d5805fbb2da2dcb2da805d399b960ced828174e69c486783dafd7a57a36d",
+    "address_or_relative_path": "https://skating-vision.online/events/2627/kon10/2-e__Scores.pdf"
+  },
+  {
+    "source_id": "archive_2024_first_ice",
+    "kind": "ARCHIVE_URL",
+    "status": "Архивный список проверен; первичный PDF найден отдельно",
+    "checked_at": "2026-10-23T12:37:29.881055+00:00",
+    "why_it_matters": "Архив заявки, сам по себе не содержит детальных оценок",
+    "local_path": "files/sources/archive_2024_first_ice.txt",
+    "sha256": "fd67d7cc5ab33711a96482facbf5c02765010d107834337befdbb6cfa578910b",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/3172"
+  },
+  {
+    "source_id": "archive_2024_obninsk",
+    "kind": "ARCHIVE_URL",
+    "status": "Архивный список проверен; первичный PDF найден отдельно",
+    "checked_at": "2026-10-23T12:37:29.893068+00:00",
+    "why_it_matters": "Архив первенства области",
+    "local_path": "files/sources/archive_2024_obninsk.txt",
+    "sha256": "35fcce79b773d1bb0b62acc75ddfecb9c077d20fe7b349ebe273008b6fa4a210",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/3335"
+  },
+  {
+    "source_id": "archive_2024_marshal",
+    "kind": "ARCHIVE_URL",
+    "status": "Архивный список проверен; первичный PDF найден отдельно",
+    "checked_at": "2026-10-23T12:37:29.905054+00:00",
+    "why_it_matters": "Архив Жуков 29.11.2024",
+    "local_path": "files/sources/archive_2024_marshal.txt",
+    "sha256": "85822d8a8dd9b3be64162c3b2d5292798ce1083133cee12afa9dba990ec0813d",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/3419"
+  },
+  {
+    "source_id": "archive_2025_serpukhov",
+    "kind": "ARCHIVE_URL",
+    "status": "Не проверен в текущем сеансе",
+    "checked_at": null,
+    "why_it_matters": "Архив Серпухов",
+    "local_path": "files/sources/archive_2025_serpukhov.txt",
+    "sha256": "84c4f041ebcd4412baa568eabe47d2941ab02255c68a526351ea9d4f7dfe9fa3",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/3973"
+  },
+  {
+    "source_id": "archive_2025_federation",
+    "kind": "ARCHIVE_URL",
+    "status": "Не проверен в текущем сеансе",
+    "checked_at": null,
+    "why_it_matters": "Архив приз Федерации Калуга",
+    "local_path": "files/sources/archive_2025_federation.txt",
+    "sha256": "ebdc012d6f137753b562afa074d5f9a7c648948e5360efc3f80e9f4af3506a80",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/3939"
+  },
+  {
+    "source_id": "archive_2025_borovsk",
+    "kind": "ARCHIVE_URL",
+    "status": "Не проверен в текущем сеансе",
+    "checked_at": null,
+    "why_it_matters": "Архив Боровский район",
+    "local_path": "files/sources/archive_2025_borovsk.txt",
+    "sha256": "96f57506f97ce2331ef4ebcb679e877b5b6f2965fe61493c3c65aa6aedcd4fac",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/4439"
+  },
+  {
+    "source_id": "school_post_2026_apr",
+    "kind": "SECONDARY_URL",
+    "status": "Не проверен в текущем сеансе",
+    "checked_at": null,
+    "why_it_matters": "Публикация СШОР Олимп, бронза апрель 2026 (точное сообщение искать)",
+    "local_path": "files/sources/school_post_2026_apr.txt",
+    "sha256": "a5c83f2ce2b245ac3a68dc3012561fc4d033cb36287f79b1b392159b3304aaac",
+    "address_or_relative_path": "https://t.me/s/shor_olimp_40"
+  },
+  {
+    "source_id": "school_post_2025_nov",
+    "kind": "SECONDARY_URL",
+    "status": "Не проверен в текущем сеансе",
+    "checked_at": null,
+    "why_it_matters": "Публикация спортшколы, бронза ноябрь 2025",
+    "local_path": "files/sources/school_post_2025_nov.txt",
+    "sha256": "9a5c7087dff8561b8a854f3526c48b8d185199f8d750263f95dd548a7b2779a3",
+    "address_or_relative_path": "https://xn----btbtckbikbcek6a.xn--p1ai/novosti/festivale-po-figurnomu-kataniyu-na-konkakh-shag-vp/"
+  },
+  {
+    "source_id": "archive_2025_kaluga",
+    "kind": "ARCHIVE_URL",
+    "status": "Ссылка восстановлена; заявка не подтверждает результат",
+    "checked_at": "2026-10-23T12:37:29.921055+00:00",
+    "why_it_matters": "Ссылка отсутствовала в исходном реестре; не восстанавливать догадкой",
+    "local_path": "files/sources/archive_2025_kaluga.txt",
+    "sha256": "b952cdf4301d67f132d9552afa088896bfad8fe541c90bf9328f55e3f770f752",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/4488"
+  },
+  {
+    "source_id": "download_20",
+    "kind": "WEB_CHECK",
+    "status": "Доступен HTTP 200; оригинал сохранён",
+    "checked_at": "2026-10-23T11:35:35.159139+00:00",
+    "local_path": "files/protocols/2026-10-17_autumn-leaves.pdf",
+    "sha256": "a695d5805fbb2da2dcb2da805d399b960ced828174e69c486783dafd7a57a36d",
+    "address_or_relative_path": "https://skating-vision.online/events/2627/kon10/2-e__Scores.pdf"
+  },
+  {
+    "source_id": "history_20261023T120058599545Z_87485d",
+    "kind": "HISTORY_RESEARCH",
+    "status": "FETCHED_UNREVIEWED",
+    "checked_at": "2026-10-23T12:00:58.599545+00:00",
+    "local_path": "files/sources/history_20261023T120058599545Z_87485d.txt",
+    "sha256": "c962f6dc162dea9a4f0409c12b5050fc7fbcb50d62f37292fbc1a737ae832d74",
+    "address_or_relative_path": "https://xn----btbtckbikbcek6a.xn--p1ai/novosti/festivale-po-figurnomu-kataniyu-na-konkakh-shag-vp/"
+  },
+  {
+    "source_id": "history_20261023T120205613557Z_ff90a0",
+    "kind": "HISTORY_RESEARCH",
+    "status": "FETCHED_UNREVIEWED",
+    "checked_at": "2026-10-23T12:02:05.613557+00:00",
+    "local_path": "files/sources/history_20261023T120205613557Z_ff90a0.txt",
+    "sha256": "3bdcfdfa63d4542f019f931e629090157556eb1a520a10a386cc0559205920a2",
+    "address_or_relative_path": "https://t.me/s/shor_olimp_40?q=%D0%9A%D1%83%D0%B7%D0%B8%D0%BD%D0%B0"
+  },
+  {
+    "source_id": "history_20261023T120405463444Z_ee0c60",
+    "kind": "HISTORY_RESEARCH",
+    "status": "Организаторское табло сверено с PDF",
+    "checked_at": "2026-10-23T12:04:05.463444+00:00",
+    "local_path": "files/sources/history_20261023T120405463444Z_ee0c60.txt",
+    "sha256": "9c28229a2b6fa30067cd35f0a0893735ee16e690ebd7efe3c0ad86bb24e14837",
+    "address_or_relative_path": "http://b1112102024kaluga.host1840592.hostland.pro/SEG021.HTM"
+  },
+  {
+    "source_id": "history_20261023T120405464483Z_11b676",
+    "kind": "HISTORY_RESEARCH",
+    "status": "Организаторское табло сверено с PDF",
+    "checked_at": "2026-10-23T12:04:05.465443+00:00",
+    "local_path": "files/sources/history_20261023T120405464483Z_11b676.txt",
+    "sha256": "ec432f3dcff82af140acb0980312760ea06edce42e94f97a12aacc1881657e3c",
+    "address_or_relative_path": "http://b1516112024obninsk.host1840592.hostland.pro/SEG021.HTM"
+  },
+  {
+    "source_id": "history_20261023T120405466446Z_392640",
+    "kind": "HISTORY_RESEARCH",
+    "status": "JUDGES_DETAILS — PDF визуально сверен; арифметика проверена",
+    "checked_at": "2026-10-23T12:04:05.466446+00:00",
+    "local_path": "files/protocols/2024-10-11_first-ice.pdf",
+    "sha256": "5251efd47c26536d9a06ec16fe0275be828d8516cf2652dfb49e49273d6ce703",
+    "address_or_relative_path": "http://b1112102024kaluga.host1840592.hostland.pro/ooeo_KM_Scores.pdf"
+  },
+  {
+    "source_id": "history_20261023T120405467529Z_91876f",
+    "kind": "HISTORY_RESEARCH",
+    "status": "JUDGES_DETAILS — PDF визуально сверен; арифметика проверена",
+    "checked_at": "2026-10-23T12:04:05.467529+00:00",
+    "local_path": "files/protocols/2024-11-15_oblast.pdf",
+    "sha256": "e5b2bcc6ed6f2d477ab176fb94ed9c62d21adcf72120e5ff6010c9e53c68913a",
+    "address_or_relative_path": "http://b1516112024obninsk.host1840592.hostland.pro/oo_KM_Scores.pdf"
+  },
+  {
+    "source_id": "history_20261023T120612312981Z_d0e83b",
+    "kind": "HISTORY_RESEARCH",
+    "status": "FETCHED_UNREVIEWED",
+    "checked_at": "2026-10-23T12:06:12.312981+00:00",
+    "local_path": "files/sources/history_20261023T120612312981Z_d0e83b.txt",
+    "sha256": "4cd15674daa798a41a90d520c275f9ee864c21b3f97708c0f92b64ff3979c2f6",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/4488"
+  },
+  {
+    "source_id": "history_20261023T120642144136Z_9af9f4",
+    "kind": "HISTORY_RESEARCH",
+    "status": "JUDGES_DETAILS — PDF визуально сверен; арифметика проверена",
+    "checked_at": "2026-10-23T12:06:42.144136+00:00",
+    "local_path": "files/protocols/2024-11-29_marshal.pdf",
+    "sha256": "db7ab6c5bc91b591ed9c32573a47b3f7146b166085e8bdecb1dadca8b5a9da2a",
+    "address_or_relative_path": "http://b29112024zhukov.host1840592.hostland.pro/oo_KM_Scores.pdf"
+  },
+  {
+    "source_id": "history_20261023T120642145153Z_c4393d",
+    "kind": "HISTORY_RESEARCH",
+    "status": "Организаторское табло сверено с PDF",
+    "checked_at": "2026-10-23T12:06:42.145153+00:00",
+    "local_path": "files/sources/history_20261023T120642145153Z_c4393d.txt",
+    "sha256": "3a44318e8d067d1db3b1d5933d20bb6a3314062f8be9e9e37ae551e62fec506b",
+    "address_or_relative_path": "http://b29112024zhukov.host1840592.hostland.pro/SEG021.HTM"
+  },
+  {
+    "source_id": "history_20261023T120642146137Z_b0701d",
+    "kind": "HISTORY_RESEARCH",
+    "status": "JUDGES_DETAILS — PDF визуально сверен; арифметика проверена",
+    "checked_at": "2026-10-23T12:06:42.146137+00:00",
+    "local_path": "files/protocols/2026-04-03_marshal.pdf",
+    "sha256": "14db358d2a02c39f05b4380cb80f60fba4afa0faadda9b193548f8a4980e2c8c",
+    "address_or_relative_path": "http://c03042026zhukov.host1840592.hostland.pro/3_FS_Scores.pdf"
+  },
+  {
+    "source_id": "history_20261023T120845465510Z_6a04b8",
+    "kind": "HISTORY_RESEARCH",
+    "status": "Организаторское табло сверено с PDF",
+    "checked_at": "2026-10-23T12:08:45.465510+00:00",
+    "local_path": "files/sources/history_20261023T120845465510Z_6a04b8.txt",
+    "sha256": "96b718d8445bcf989626e526289f8c0e9c4cdcc801fd9895ebdfd087607c784b",
+    "address_or_relative_path": "http://c03042026zhukov.host1840592.hostland.pro/SEG013.HTM"
+  },
+  {
+    "source_id": "history_20261023T120928840150Z_0d9cef",
+    "kind": "HISTORY_RESEARCH",
+    "status": "FETCHED_UNREVIEWED",
+    "checked_at": "2026-10-23T12:09:28.840150+00:00",
+    "local_path": "files/sources/history_20261023T120928840150Z_0d9cef.txt",
+    "sha256": "56d6c8ca01667994cf7746a6a701a26e9f77fd493153f0d90d5c44b6239ca7ca",
+    "address_or_relative_path": "http://b29052025kaluga.host1840592.hostland.pro/3_FS_Scores.pdf"
+  },
+  {
+    "source_id": "user_kaluga_judges_81cabd5c0c62",
+    "kind": "USER_PROVIDED_JUDGES_PDF",
+    "status": "JUDGES_DETAILS — страница 7 визуально сверена; все 25 сумм проверены",
+    "checked_at": "2026-10-23T16:03:58.656644+00:00",
+    "why_it_matters": "Полный зачёт 25 девочек; Милана 20-я; 7 элементов, J1–J3, штраф за время",
+    "local_path": "files/protocols/2026-10-23_first-ice.pdf",
+    "sha256": "2a9983a7cc0096a8fb8687856e0d9ab070be67495457063bef5ff5f56b891ea5",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "family_photo_1_2f37164f862d",
+    "kind": "PERSONAL_PHOTO",
+    "status": "Семейное фото; дата и старт не установлены",
+    "checked_at": "2026-10-23T16:22:16.421162+00:00",
+    "why_it_matters": "Оформление личного досье; не подтверждает результат соревнования",
+    "local_path": "files/photos/milana-1.webp",
+    "sha256": "9c78fca50793f84cf9a4c6d2cc5b57f706ce70e784946121e91917ce4f22ec13",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "family_photo_2_ce242dc1fdfc",
+    "kind": "PERSONAL_PHOTO",
+    "status": "Семейное фото; дата и старт не установлены",
+    "checked_at": "2026-10-23T16:22:16.451160+00:00",
+    "why_it_matters": "Оформление личного досье; не подтверждает результат соревнования",
+    "local_path": "files/photos/milana-2.webp",
+    "sha256": "06b84c9ae1c46d82e8dac8a980eb5e79492c712b99717460357a216beef0df88",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "family_photo_3_229873b08b6a",
+    "kind": "PERSONAL_PHOTO",
+    "status": "Семейное фото; дата и старт не установлены",
+    "checked_at": "2026-10-23T16:22:16.468581+00:00",
+    "why_it_matters": "Оформление личного досье; не подтверждает результат соревнования",
+    "local_path": "files/photos/milana-3.webp",
+    "sha256": "508ad5f79b08c69ffe7831e172ec9cf99d609fa415290ba023142e4d569fba75",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "family_photo_4_4d8b3e524421",
+    "kind": "PERSONAL_PHOTO",
+    "status": "Семейное фото; дата и старт не установлены",
+    "checked_at": "2026-10-23T16:22:16.492454+00:00",
+    "why_it_matters": "Оформление личного досье; не подтверждает результат соревнования",
+    "local_path": "files/photos/milana-4.webp",
+    "sha256": "fc3841a5f890ae5b1647bc004dbec05dee65e383c746ad744cb9599fffcca339",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "profile_portrait_f6e020b77ca3",
+    "kind": "PERSONAL_PHOTO",
+    "status": "Пользовательский визуальный материал; не источник спортивных результатов",
+    "checked_at": "2026-10-23T16:32:37.280604+00:00",
+    "local_path": "files/photos/milana-5.webp",
+    "sha256": "d5f7d2f3f9ce194d7d130eb4f03f6f641cbcf23ce13fd24de7c370336cd31a09",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_001_631db977b723",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.548169+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-001.webp",
+    "sha256": "2d5a52c8ffd5b8494df8d422f2eff8c0fd050572b37128059b40e319f090d9e9",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_002_ea0af07c6122",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.569379+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-002.webp",
+    "sha256": "6046e7599e1d12b1af05ccb50316a2bad23def210278903c3dab08fb979e4711",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_003_64ce70db82c4",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.586864+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-003.webp",
+    "sha256": "9f0134169fe6bf1bdd70d29fca42592001f4991177bf4efeb74906c8a0e69982",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_004_2f4554a9a942",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.605826+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-004.webp",
+    "sha256": "e10ef6b748856ed717aa592940556e67e5fdfa178b5f8bccd75c64ff5b287b53",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_005_3b236c73eec8",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.629826+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-005.webp",
+    "sha256": "79513b8e908455501b242abb31fbf3ef9568ee5a3c570c5cbc6bed2d581b3773",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_006_0cba34d21fc5",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.645370+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-006.webp",
+    "sha256": "73896ecdfbea89218ae83da09fc80cdf538581e73d823e1e91348f90ef3b58d7",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_007_6576586e0384",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.660384+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-007.webp",
+    "sha256": "8cfaa67888d3970b9836a1d3b167dd59a033cbf347b4baa4ee097cbbac4d37bc",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_008_299e5ac30e4b",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.675561+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-008.webp",
+    "sha256": "19bac23be84e7de60b09ef3970052dcc00c51c815606eca7a1c90283d495e6fe",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_009_6226195cad57",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.690304+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-009.webp",
+    "sha256": "0f40b10c30592cecfd88b96f9d502fe66c40481290270bc39fd5a31aff5498da",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_010_fe1f775cb97b",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь с результатом соревнования не подтверждена",
+    "checked_at": "2026-10-23T17:17:27.709192+00:00",
+    "why_it_matters": "Оригинал награды из семейного архива; надписи сверены визуально",
+    "local_path": "files/photos/AW-010.webp",
+    "sha256": "58783e31d61ee7c2412d53cf361e1b417690c772dfd7df9c7bf61f0744abfa68",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_011_cc3f6fd4c4c8",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.248816+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-011.webp",
+    "sha256": "38ea7f35a4eadcd17f34a6255e818ee4be599e50c41301e38001e21e20feec4e",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_012_dd83021497f9",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.255822+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-012.webp",
+    "sha256": "a50e92c01889362bcb69689c6dfd69973ba76d1adf602a991e4bc7506ac9b017",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_013_512dd3868fa1",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.260829+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-013.webp",
+    "sha256": "936698651c3c93780c7290ea7047f82565dc32cdb77f8b829c0850454cf9ec78",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_014_6fc4805cd2b7",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.267452+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-014.webp",
+    "sha256": "55e0e19f16af794b602b4f717bd0cbbd1f4fc9064c65e0f33a9ca241c550c8ed",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_015_05ae506a61ee",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.270465+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-015.webp",
+    "sha256": "5346137642da8328615e663872bb95f97d39265d18fe7eeb2dce14639fd979e1",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_016_22c4dfdcf033",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.275444+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-016.webp",
+    "sha256": "a70bb0cf28416fec109322a89e425f3e8b369d75e654fc7e4a24775fd9ab46c6",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_017_96675b9d101f",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.278445+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-017.webp",
+    "sha256": "11a8105482beb73f291328f684f56171fbc2345a1d85df51b0353cd43900c4cb",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_018_eea24efeb878",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.284443+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-018.webp",
+    "sha256": "cc36065e210cd00ca77511bd4875e37d93731193a7306fdc69757fcfb982f57d",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_019_02556596b207",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.290460+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-019.webp",
+    "sha256": "ef52c19f1bf30dc8ccba5d9a1532ed16f15b5d875ea3578d34556a30b187426c",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_020_c6364aa3221f",
+    "kind": "AWARD_PHOTO",
+    "status": "Фотография предмета; связь со стартом не подтверждена",
+    "checked_at": "2026-10-23T17:26:45.296444+00:00",
+    "why_it_matters": "Надписи на оригинале награды, семейный архив",
+    "local_path": "files/photos/AW-020.webp",
+    "sha256": "69b18c9f0a59beb5bdc32835897696d9748dd0faa2b450f73323d8f6c870ed1e",
+    "address_or_relative_path": null
+  }
+]

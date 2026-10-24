@@ -1,0 +1,68 @@
+window.MilanaPremium=(()=>{
+const esc=v=>String(v??'нет данных').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),f=v=>Number.isFinite(v)?v.toFixed(2).replace('.',','):'—',date=v=>/^\d{4}-\d{2}-\d{2}$/.test(v)?v.slice(8)+'.'+v.slice(5,7)+'.'+v.slice(0,4):v;
+const state={recordKey:null,boardSearch:'',boardScope:'all',boardSort:'tss',boardDirection:-1,sourceKind:'protocols',sourceSearch:''};let passportChart;
+const open=id=>CareerReport.open(id);
+function hero(D){
+const node=document.querySelector('#hero-insights'),model=CareerRecords.build(D.events);if(!node)return;
+if(!model.groups.some(g=>g.key===state.recordKey))state.recordKey=model.groups[0]?.key||null;
+const group=model.groups.find(g=>g.key===state.recordKey),best=model.bestPlace;
+node.innerHTML=`<div class="record-heading"><div><h2>Личные рекорды</h2><span>За всю подтверждённую историю в выбранном зачёте</span></div><label>Категория и программа<select id="record-context">${model.groups.map(g=>`<option value="${esc(g.key)}" ${g.key===state.recordKey?'selected':''}>${esc(g.label)}</option>`).join('')||'<option>Нет протоколов</option>'}</select></label></div><div class="record-grid">${[['tss','Общий балл','TSS'],['tes','Техника','TES'],['pcs','Компоненты','PCS']].map(([key,title,code])=>{const r=group?.records[key];return `<button class="record-card" type="button" data-record="${key}" ${r?'':'disabled'}><span class="record-name">${title}<small>${code}</small></span><strong>${f(r?.value)}</strong><span class="record-divider"></span><span class="record-date">${r?date(r.event.date)+' · '+esc(r.event.city):'Нет подтверждённого результата'}</span><span class="record-category">${esc(group?.category||'')}${r?.ties.length>1?'<br>Повторён '+r.ties.length+' раза':''}</span><span class="record-action">Открыть выступление ↗</span></button>`}).join('')}</div><div class="achievement-strip">${best?`<button type="button" class="career-achievement" data-achievement="${best.event.id}"><strong>${best.value} место</strong><span>${esc(best.event.title)} · ${esc(best.event.category.split(',')[0])}<br>${date(best.event.date)}</span></button>`:''}<button type="button" data-history-scope="detailed"><strong>${model.confirmedCount}</strong><span>подтверждённых<br>выступлений</span></button><button type="button" data-history-scope="all"><strong>${model.archiveCount}</strong><span>записей<br>в архиве</span></button></div><p class="hero-record-note">Рекорды разных категорий и коэффициентов не объединяются. Категории стартов — не подтверждение присвоения разряда.</p>`;
+node.querySelector('#record-context').onchange=e=>{state.recordKey=e.target.value;hero(D)};
+node.querySelectorAll('[data-record]').forEach(b=>b.onclick=()=>{const r=group?.records[b.dataset.record];if(r)open(r.event.id)});
+node.querySelectorAll('[data-achievement]').forEach(b=>b.onclick=()=>open(b.dataset.achievement));
+const overview=document.querySelector('#athlete-overview');if(overview){overview.innerHTML=AthleteProfile.markup(D,state.recordKey);AthleteProfile.bind(overview,open)}
+node.querySelectorAll('[data-history-scope]').forEach(b=>b.onclick=()=>{document.querySelector('nav [data-view="history"]').click();document.querySelector('.career-history-fold').open=true;const wrap=document.querySelector('.start-filter-wrap');wrap.open=true;const select=document.querySelector('#career-status');select.value=b.dataset.historyScope;select.dispatchEvent(new Event('change'));document.querySelector('.career-intro').scrollIntoView({block:'start'})});
+}
+function decorateHistory(root,D){
+const model=CareerRecords.build(D.events);
+root.querySelectorAll('.career-event').forEach(el=>{const e=D.events.find(e=>e.id===el.dataset.careerEvent);if(!CareerRecords.confirmed(e))return;
+const group=model.groups.find(g=>g.key===CareerRecords.key(e));if(group.records.tss?.ties.some(r=>r.id===e.id)){el.classList.add('is-record');const badge=document.createElement('span');badge.className='record-badge';badge.textContent='Лучший балл в архиве категории';el.querySelector('.career-event-top').append(badge);}
+const previous=group.events.filter(p=>p.date<e.date).at(-1);if(previous){const delta=e.tss-previous.tss,p=document.createElement('p');p.className='career-delta '+(delta>=0?'positive':'negative');p.textContent=(delta>0?'+':'')+f(delta)+' к '+date(previous.date)+' · тот же зачёт';el.append(p);}
+});
+}
+function board(node,e,D,link){
+const viewingFilter=node.querySelector('.event-view-filter');
+const m=ScoreboardModel.build(e,D.boards),status=m.official?'Итоговый судейский протокол':m.provisional?'Промежуточный срез':'Результаты не подтверждены';
+node.innerHTML=`<div class="section-heading"><div><span class="section-eyebrow">СОРЕВНОВАНИЕ</span><h2>Табло</h2><p>${esc(e.title)} · ${date(e.date)} · ${esc(e.city)}</p></div><span class="status-label ${m.official?'verified':'uncertain'}">${status}</span></div><div class="board-summary"><div><span>Участниц в сохранённых данных</span><strong>${m.rows.length}${m.total?' / '+m.total:''}</strong></div><div><span>Милана · сумма</span><strong>${f(m.own?.tss)}</strong></div><div><span>Официальное место${m.provisional?' в срезе':''}</span><strong>${m.own?.rank??'—'}</strong></div><div><span>Категория</span><strong class="small-value">${esc(e.category)}</strong></div></div><div class="board-panel"><div class="board-controls"><label>Поиск участницы<input id="board-search" type="search" placeholder="Фамилия или имя" value="${esc(state.boardSearch)}"></label><label>Показать<select id="board-scope"><option value="all">Все участницы</option><option value="focus">Милана и топ-4</option><option value="milana">Только Милана</option></select></label><label>Сортировать по<select id="sort"><option value="tss">TSS · сумма</option><option value="tes">TES · техника</option><option value="pcs">PCS · компоненты</option><option value="rank">Официальное место</option></select></label><button id="board-direction" type="button" aria-label="Изменить направление сортировки">${state.boardDirection<0?'По убыванию ↓':'По возрастанию ↑'}</button><button id="board-reset" type="button">Сбросить</button></div><div id="scoretable" class="tablewrap" tabindex="0" aria-label="Табло с горизонтальной прокруткой"></div><p id="board-count" class="table-count" aria-live="polite"></p></div><div class="board-notes"><article class="panel"><h3>Первоисточник</h3><p>${m.official?'Оценки сверены с судейским протоколом, страница '+e.source_page+'.':m.provisional?'Это сохранённое онлайн-табло. Окончательные места по нему не объявляются.':'Запись в заявке не подтверждает выступление.'}</p>${link(m.source_path,'Открыть сохранённый документ ↗')}</article><article class="panel"><h3>Как читать сравнение</h3><p>Разрыв = сумма участницы − сумма Миланы. Плюс — выше Миланы, минус — ниже. Сортировка меняет порядок строк, но сохраняет официальные места.</p>${m.total&&m.rows.length<m.total?'<p>Архив содержит не весь зачёт; отсутствующие участницы не выдумываются.</p>':''}</article></div>${e.ranking_note?`<details class="quiet-fold"><summary>Примечание к зачёту</summary><p>${esc(e.ranking_note)}</p></details>`:''}${m.snapshot?`<details class="quiet-fold"><summary>Срезы и изменения</summary><p>Сохранено ${m.rows.length} участниц. Обновление источника: ${esc(m.snapshot.source_updated||'нет данных')}.</p><p>${esc(D.diffs[e.id]?.changes?.map(r=>r.name+': '+r.old_rank+' → '+r.new_rank).join('; ')||'Изменения мест не зарегистрированы.')}</p>${link('files/about/verification.txt','Архивный скриншот 7/25')}</details>`:''}`;
+const search=node.querySelector('#board-search'),scope=node.querySelector('#board-scope'),sort=node.querySelector('#sort');scope.value=state.boardScope;sort.value=state.boardSort;
+const draw=()=>{const rows=ScoreboardModel.sort(m.rows,state.boardSort,state.boardDirection).filter(r=>(state.boardScope==='all'||state.boardScope==='milana'&&ScoreboardModel.isMilana(r)||state.boardScope==='focus'&&(ScoreboardModel.isMilana(r)||r.rank<=4))&&String(r.name).toLocaleLowerCase('ru').includes(state.boardSearch.toLocaleLowerCase('ru')));
+node.querySelector('#scoretable').innerHTML=`<table class="scoreboard-table"><thead><tr>${['Место','Участница','TES · техника','PCS · компоненты','Штраф','TSS · сумма','Разрыв от Миланы'].map(t=>'<th>'+t+'</th>').join('')}</tr></thead><tbody>${rows.map(r=>`<tr class="${ScoreboardModel.isMilana(r)?'milana':''}"><td>${r.rank??'—'}</td><td>${ScoreboardModel.isMilana(r)?'<button data-own-performance="'+e.id+'">'+esc(r.name)+'</button>':esc(r.name)}</td><td>${f(r.tes)}</td><td>${f(r.pcs)}</td><td>${f(r.deduction)}</td><td><strong>${f(r.tss)}</strong></td><td>${ScoreboardModel.gap(r,m.own)>0?'+':''}${f(ScoreboardModel.gap(r,m.own))}</td></tr>`).join('')||'<tr><td colspan="7">Нет строк по выбранным условиям.</td></tr>'}</tbody></table>`;node.querySelector('#board-count').textContent=rows.length+' из '+m.rows.length+' сохранённых строк';node.querySelector('[data-own-performance]')?.addEventListener('click',()=>open(e.id));};
+search.oninput=()=>{state.boardSearch=search.value;draw()};scope.onchange=()=>{state.boardScope=scope.value;draw()};sort.onchange=()=>{state.boardSort=sort.value;draw()};node.querySelector('#board-direction').onclick=()=>{state.boardDirection*=-1;node.querySelector('#board-direction').textContent=state.boardDirection<0?'По убыванию ↓':'По возрастанию ↑';draw()};node.querySelector('#board-reset').onclick=()=>{Object.assign(state,{boardSearch:'',boardScope:'all',boardSort:'tss',boardDirection:-1});board(node,e,D,link)};draw();if(viewingFilter)node.prepend(viewingFilter);
+}
+function passport(node,e,D){
+passportChart?.destroy();passportChart=null;
+node.querySelectorAll('[data-passport-detail]').forEach(b=>b.onclick=()=>open(b.dataset.passportDetail));
+const canvas=node.querySelector('#passport-chart');
+if(canvas&&e.elements.length){
+passportChart=new Chart(canvas,{
+type:'bar',
+data:{labels:e.elements.map(r=>r.code),datasets:[
+{label:'Базовая стоимость',data:e.elements.map(r=>r.base_value),backgroundColor:'#455466',borderRadius:4},
+{label:'Итог элемента',data:e.elements.map(r=>r.element_score),backgroundColor:'#8fcde5',borderRadius:4}
+]},
+options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+animation:matchMedia('(prefers-reduced-motion: reduce)').matches?false:{duration:240},
+plugins:{legend:{labels:{color:'#b1bcc7',font:{size:12}}}},
+scales:{x:{beginAtZero:true,grid:{color:'#ffffff0b'},ticks:{color:'#96a5b5'}},y:{grid:{display:false},ticks:{color:'#c8d5df',font:{size:12}}}}
+}
+});
+}
+if(canvas&&e.elements.length){
+const key=document.createElement('details');key.className='element-code-key';key.innerHTML='<summary>Коды и русские названия элементов</summary>'+e.elements.map(r=>'<p>'+SportAnalytics.notation(r)+' — '+esc(r.plain_russian)+'</p>').join('');canvas.closest('.passport-chart-wrap').after(key);
+}
+SportAnalytics.bindNotations(node);
+}
+function sources(node,D){
+node.querySelector('#source-search').value=state.sourceSearch;
+node.querySelectorAll('[data-source-kind]').forEach(b=>b.onclick=()=>{state.sourceKind=b.dataset.sourceKind;renderSources(node,D)});node.querySelector('#source-search').oninput=e=>{state.sourceSearch=e.target.value;drawSources(node,D)};drawSources(node,D);
+}
+function renderSources(node,D){node.innerHTML=RefinedUI.sources(D,(p,t)=>`<a href="./${esc(p)}">${esc(t)}</a>`);sources(node,D);}
+function drawSources(node,D){
+const primary=new Set(D.events.filter(CareerRecords.confirmed).map(e=>e.source_path)),photos=new Map((D.photos||[]).map(p=>[p.path,p.caption]));
+const filter=s=>state.sourceKind==='all'||state.sourceKind==='awards'&&s.kind==='AWARD_PHOTO'||state.sourceKind==='family'&&(s.kind==='FAMILY_PHOTO'||String(s.source_id).startsWith('family_photo'))||state.sourceKind==='protocols'&&primary.has(s.local_path);
+const rows=D.sources.filter(filter).filter(s=>[s.source_id,s.why_it_matters,s.status,s.local_path].join(' ').toLocaleLowerCase('ru').includes(state.sourceSearch.toLocaleLowerCase('ru'))).filter((s,i,rows)=>rows.findIndex(x=>(x.local_path||x.source_id)===(s.local_path||s.source_id))===i);
+node.querySelectorAll('[data-source-kind]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.sourceKind===state.sourceKind));
+node.querySelector('#source-results').innerHTML=rows.map(s=>{const e=D.events.find(e=>e.source_path===s.local_path),title=photos.get(s.local_path)||e?.title||s.why_it_matters||s.source_id,primaryFile=primary.has(s.local_path);return `<article class="source-item"><div class="source-type">${primaryFile?'PDF':s.kind==='AWARD_PHOTO'?'ФОТО':'ФАЙЛ'}</div><div><h3>${esc(title)}</h3><span class="source-status">${primaryFile?'Судейская детализация':esc(s.status)}</span><p>${esc(e?date(e.date)+' · '+e.category:s.source_id)}</p><details><summary>Происхождение и контрольная сумма</summary>${D.sources.filter(x=>s.local_path&&x.local_path===s.local_path).map(x=>'<p>'+esc(x.source_id)+' · '+esc(x.status)+' · '+esc(x.why_it_matters||'')+'</p>').join('')}<p>Проверка: ${esc(s.checked_at?.slice(0,10)||'нет данных')}${e?' · страница '+e.source_page:''}</p><code>${esc(s.sha256||'нет данных')}</code><p>${esc(s.local_path||'Локальный оригинал отсутствует')}</p>${s.address_or_relative_path?.startsWith('http')?`<a href="${esc(s.address_or_relative_path)}" target="_blank" rel="noopener">Внешняя ссылка ↗</a>`:''}</details></div>${s.local_path?`<a class="source-open" href="./${esc(s.local_path)}">Открыть ↗</a>`:'<span class="muted">Нет файла</span>'}</article>`}).join('')||'<p class="empty-state">По этим условиям источников нет.</p>';node.querySelector('#source-count').textContent=rows.length+' источников';
+}
+return {hero,decorateHistory,board,passport,sources,state};
+})();

@@ -1,0 +1,38 @@
+/* Готовый HTML доступен сразу. Сценарии лишь добавляют фильтры и переключение. */
+(()=>{
+const ids=['history','awards','board','sources'],saved=Object.fromEntries([...ids,'hero-insights','athlete-overview'].map(id=>[id,document.getElementById(id).innerHTML]));
+function fallback(error){for(const[id,html]of Object.entries(saved)){const n=document.getElementById(id);n.innerHTML=html;n.hidden=false}document.querySelector('body > #career-dialog')?.remove();document.body.classList.remove('enhanced','report-modal-open','document-open','award-modal-open');document.body.dataset.view='history';document.querySelectorAll('nav [data-view]').forEach(a=>a.onclick=null);console.warn('Интерактивный режим недоступен; сохранено полное статическое представление.',error?.message);}
+try{
+const D=window.FIGURKA;if(!D||!window.Chart)throw Error('Не загружены данные или библиотека графиков');
+for(const a of D.awards){const img=document.querySelector('[data-static-award="'+a.id+'"] img');if(img)a.cutout_src=img.getAttribute('src')}
+
+for(const a of D.visual_assets||[]){if(a.path==='ui/assets/milana-editorial-v2.webp'&&!a.src)a.src=document.querySelector('.profile-photo img').getAttribute('src')}
+let selected=D.events.at(-1).id,passportOpen=false;const initial=location.hash.slice(1);let view=ids.includes(initial)?initial:'history';if(initial==='passports'||initial.startsWith('passport-')){view='board';passportOpen=true;if(initial.startsWith('passport-')&&D.events.some(e=>e.id===initial.slice(9)))selected=initial.slice(9)}
+const $=s=>document.querySelector(s),esc=v=>String(v??'нет данных').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),f=v=>Number.isFinite(v)?v.toFixed(2).replace('.',','):'—',link=(p,t)=>p?`<a href="./${esc(p)}" target="_blank" rel="noopener">${esc(t)}</a>`:'';
+const table=(heads,rows)=>`<div class="tablewrap" tabindex="0" aria-label="Таблица с горизонтальной прокруткой"><table><thead><tr>${heads.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(xs=>'<tr>'+xs.map(x=>'<td>'+x+'</td>').join('')+'</tr>').join('')}</tbody></table></div>`;
+function technicalComparison(e){const es=D.events.filter(x=>x.source_verified&&x.elements.length&&SportAnalytics.model.comparable(x,e));if(es.length<2)return '<p>Нужен второй подтверждённый протокол того же зачёта. Разные категории не объединяются.</p>';const codes=[...new Set(es.flatMap(x=>x.elements.map(r=>r.code)))];return table(['Элемент и перевод',...es.map(x=>esc(x.date)+' · итог / база / качество')],codes.map(code=>[esc(code)+' — '+esc(es.flatMap(x=>x.elements).find(r=>r.code===code).plain_russian),...es.map(x=>{const r=x.elements.find(r=>r.code===code);return r?[r.element_score,r.base_value,r.goe_value].map(f).join(' / '):'Нет такого элемента'})]));}
+function eventFilter(node,title){node.querySelector('.event-view-filter')?.remove();node.insertAdjacentHTML('afterbegin',`<label class="event-view-filter">${title}<select class="event-filter" aria-label="${title}">${[...D.events].reverse().map(e=>`<option value="${e.id}" ${e.id===selected?'selected':''}>${esc(e.date+' · '+e.title+' · '+e.category)}</option>`).join('')}</select></label>`);node.querySelector('.event-filter').onchange=ev=>{selected=ev.target.value;passportOpen=false;render()};}
+function render(){
+const e=D.events.find(x=>x.id===selected);document.body.dataset.view=view;
+const n=e.judge_count||3,heads=Array.from({length:n},(_,i)=>'J'+(i+1));
+const elements=e.elements.length?`<div class="panel"><h3>Элементы и оценки судей</h3>${table(['Код и русский перевод','База','GOE · качество',...heads,'Итог'],e.elements.map(r=>[SportAnalytics.notation(r)+'<br>'+esc(r.plain_russian),f(r.base_value),f(r.goe_value),...heads.map((_,i)=>r['judge_'+(i+1)]??'—'),f(r.element_score)]))}${table(['Компонент',...heads,'Среднее','Коэфф.'],e.components.map(r=>[esc(r.component),...heads.map((_,i)=>f(r['j'+(i+1)])),f(r.mean),f(r.multiplier)]))}<p class="muted">Прочерк — отсутствие данных, не ноль. Присвоение разряда не подтверждено.</p></div>`:'<p>Судейской детализации нет. Исходный статус записи сохранён.</p>';
+MilanaPremium.board($('#board'),e,D,link);eventFilter($('#board'),'Результаты выбранного старта');$('#board-reset').onclick=()=>{Object.assign(MilanaPremium.state,{boardSearch:'',boardScope:'all',boardSort:'tss',boardDirection:-1});render()};
+$('#board').insertAdjacentHTML('beforeend',`<details class="event-passport" id="passport-${esc(e.id)}" ${passportOpen?'open':''}><summary>Открыть паспорт выступления · ${esc(e.title)}</summary><div id="passports"></div></details>`);
+const passportFold=$('#board .event-passport');$('#board .board-panel').before(passportFold);function loadPassport(){const content=$('#passports');if(content.dataset.ready)return;content.innerHTML=RefinedUI.passports(D,e,link,elements,technicalComparison);MilanaPremium.passport(content,e,D);content.dataset.ready='true'}
+passportFold.ontoggle=()=>{passportOpen=passportFold.open;if(passportOpen){loadPassport();requestAnimationFrame(()=>{const canvas=$('#passport-chart');if(canvas)Chart.getChart(canvas)?.resize()})}};if(passportOpen)loadPassport();
+const historyOpen=$('#history .career-history-fold')?.open||false;$('#history').innerHTML=`<details class="career-history-fold" ${historyOpen?'open':''}><summary>Хронология и подробная динамика</summary><div id="career-history-content"></div></details>`;CareerReport.mount($('#career-history-content'),D,id=>{selected=id});AwardsReport.mount($('#awards'),D);$('#sources').innerHTML=RefinedUI.sources(D,link);MilanaPremium.sources($('#sources'),D);
+for(const id of ids)$('#'+id).hidden=id!==view;
+$('#fresh').textContent='Версия '+new Date(D.built_at).toLocaleString('ru-RU',{timeZone:'Europe/Moscow'})+' МСК. Актуальность каждого источника указана отдельно.';
+document.querySelectorAll('nav [data-view]').forEach(a=>{a.setAttribute('aria-current',a.dataset.view===view?'page':'false');a.removeAttribute('aria-pressed')});
+}
+function show(v,scroll=true){try{if(v==='passports'){v='board';passportOpen=true}view=v;render();if(scroll){if(v==='history')window.scrollTo({top:0,behavior:'instant'});else $('#'+v).scrollIntoView({block:'start',behavior:'instant'})}}catch(error){fallback(error)}}
+render();
+document.querySelectorAll('nav [data-view]').forEach(a=>a.onclick=ev=>{ev.preventDefault();show(a.dataset.view);try{history.replaceState(null,'','#'+view)}catch{}});
+window.addEventListener('hashchange',()=>{const v=location.hash.slice(1);if(v==='home')show('history');else if(v==='passports')show('passports');else if(v.startsWith('passport-')&&D.events.some(e=>e.id===v.slice(9))){selected=v.slice(9);passportOpen=true;show('board')}else if(v.startsWith('start-')&&D.events.some(e=>e.id===v.slice(6))){selected=v.slice(6);passportOpen=false;show('board')}else if(ids.includes(v))show(v)});
+const seasons=[...new Set(D.events.map(e=>SportAnalytics.season(e.date)))].sort().reverse();$('#profile-season').innerHTML='<option value="all">Вся история · 2024–2026</option>'+seasons.map(s=>`<option value="${s}">Сезон ${s}</option>`).join('');
+$('#profile-season').onchange=ev=>CareerReport.setSeason(ev.target.value);
+$('#hero-start').onclick=ev=>{ev.preventDefault();$('#athlete-overview').scrollIntoView({block:'start'})};
+$('#hero-latest').onclick=ev=>{ev.preventDefault();const latest=D.events.filter(CareerRecords.confirmed).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);if(latest)CareerReport.open(latest.id)};
+OfflineVault.mount();document.body.classList.add('enhanced');window.FigurkaApp={show,getView:()=>view};
+}catch(error){fallback(error)}
+})();
