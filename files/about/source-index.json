@@ -484,5 +484,165 @@
     "local_path": "files/photos/AW-020.webp",
     "sha256": "69b18c9f0a59beb5bdc32835897696d9748dd0faa2b450f73323d8f6c870ed1e",
     "address_or_relative_path": null
+  },
+  {
+    "source_id": "deep_20261025T160739452755Z_2dc16d",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:07:39.452755+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T160739452755Z_2dc16d.txt",
+    "sha256": "139a1ec9bc93ab5114f4612d39357a3ded896725f2fa094863f49e948789fd4a",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2024/2991"
+  },
+  {
+    "source_id": "deep_20261025T160739796678Z_264e21",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:07:39.796678+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T160739796678Z_264e21.txt",
+    "sha256": "5b7de7bfb76638237db5a243007b9522f1890d9c3503409d1551087a9f666796",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2026/5911"
+  },
+  {
+    "source_id": "deep_20261025T160739831238Z_f6207c",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:07:39.831238+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T160739831238Z_f6207c.txt",
+    "sha256": "0ba8280fee85e572daf902ff6ce3dad94f422ccd4a1f06ed9d4d055b446d512d",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2026/5875"
+  },
+  {
+    "source_id": "deep_20261025T160739832237Z_585e63",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:07:39.832237+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T160739832237Z_585e63.txt",
+    "sha256": "05436ccb0207b100eac23df063dd58211c7ed22697e4e6ce32c85fe83adb9f67",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2026/5709"
+  },
+  {
+    "source_id": "deep_20261025T160739957160Z_8e1794",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:07:39.957160+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T160739957160Z_8e1794.txt",
+    "sha256": "096518f0fa05f11465d6b2d0676321a43c432040999dfb383bbfafdd3f34f53b",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2026/5340"
+  },
+  {
+    "source_id": "deep_20261025T160739986884Z_d474f2",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:07:39.986884+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T160739986884Z_d474f2.txt",
+    "sha256": "f6203e0e35c568b38f7f3575a4e93bb986ac9417b54f292662e3a02e8b34ddbb",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2026/4954"
+  },
+  {
+    "source_id": "deep_20261025T161344883898Z_423ada",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:13:44.883898+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/protocols/2025-11-29_zhukov.pdf",
+    "sha256": "b16dd37cf1dd70a681d722a7350a1db178ae27afac1abecc0e3f9088a5622d5d",
+    "address_or_relative_path": "http://c29112025zhukov.host1840592.hostland.pro/3_FS_Scores.pdf"
+  },
+  {
+    "source_id": "deep_20261025T161344884895Z_80d839",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:13:44.884895+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/protocols/2026-02-14_obninsk.pdf",
+    "sha256": "d8337e7bbce9300987003ef183f58061c5ff092dab5401c3c1c328e3cc71a44e",
+    "address_or_relative_path": "http://c1415022026obninsk.host1840592.hostland.pro/_3_FS_Scores.pdf"
+  },
+  {
+    "source_id": "deep_20261025T161528798256Z_241d38",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:15:28.799255+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/sources/deep_20261025T161528798256Z_241d38.txt",
+    "sha256": "78f1b30e35f871ef9f15ef5bef62a86ebfe129614b1fad1a73fd360a3701f510",
+    "address_or_relative_path": "http://c29112025zhukov.host1840592.hostland.pro/SEG023.HTM"
+  },
+  {
+    "source_id": "deep_20261025T161528944587Z_368211",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:15:28.944587+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/sources/deep_20261025T161528944587Z_368211.txt",
+    "sha256": "bc8ce9e33121520355ca50a35fe0b772a986a9fce34292b8b30ace1fc28e1fec",
+    "address_or_relative_path": "http://c1415022026obninsk.host1840592.hostland.pro/SEG012.HTM"
+  },
+  {
+    "source_id": "deep_20261025T163357259876Z_f9fd1c",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:33:57.259876+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T163357259876Z_f9fd1c.txt",
+    "sha256": "accc4bd9fbe4b688d856dc08800d80c07322a089f4c15d9e8dc52f5d56c19a17",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/4383"
+  },
+  {
+    "source_id": "deep_20261025T163357259876Z_e23bca",
+    "kind": "HISTORY_RESEARCH",
+    "status": "RESEARCH_ONLY",
+    "checked_at": "2026-10-25T16:33:57.259876+00:00",
+    "why_it_matters": "Поисковый оригинал; сам по себе не подтверждает выступление Миланы. HTTP 200",
+    "local_path": "files/sources/deep_20261025T163357259876Z_e23bca.txt",
+    "sha256": "fcb5c7d72b635473ee2749b1a36874b08fca2aba5d7d20da93e6b910a047b6cc",
+    "address_or_relative_path": "https://xn--80aej0akpm3a2c.online/info/archive/2025/4184"
+  },
+  {
+    "source_id": "deep_20261025T163619109942Z_3908d0",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:36:19.109942+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/protocols/2025-05-17_geyer.pdf",
+    "sha256": "450ee6df46b18b604afb3922d02205d882aad654895e8e845d1a76cee9cb8bb5",
+    "address_or_relative_path": "http://b1718052025obninsk.host1840592.hostland.pro/_KM_Scores.pdf"
+  },
+  {
+    "source_id": "deep_20261025T163624784593Z_30cfe0",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:36:24.784593+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/protocols/2025-04-18_kaluga.pdf",
+    "sha256": "c8425c5469c377e32bb739e55c8dcdb2fe788024f3a150b8d110748f5d1a4681",
+    "address_or_relative_path": "http://b1819042025kaluga.host1840592.hostland.pro/_KM_Scores.pdf"
+  },
+  {
+    "source_id": "deep_20261025T163813660089Z_a11acf",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:38:13.660089+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/sources/deep_20261025T163813660089Z_a11acf.txt",
+    "sha256": "a9f0868f775d4be37a1638d63407d63a391f310ed8cbfad01ba43608f0eb5469",
+    "address_or_relative_path": "http://b1718052025obninsk.host1840592.hostland.pro/SEG019.HTM"
+  },
+  {
+    "source_id": "deep_20261025T163813661089Z_17ff2b",
+    "kind": "JUDGES_DETAILS",
+    "status": "JUDGES_DETAILS",
+    "checked_at": "2026-10-25T16:38:13.661089+00:00",
+    "why_it_matters": "Первичный протокол: результат и элементы вручную сверены 25.10.2026.",
+    "local_path": "files/sources/deep_20261025T163813661089Z_17ff2b.txt",
+    "sha256": "eabc47a2b5f77d04856b08be6b45b4482ea77af5ec269de6abd5e7faeffdbc88",
+    "address_or_relative_path": "http://b1819042025kaluga.host1840592.hostland.pro/SEG019.HTM"
   }
 ]
