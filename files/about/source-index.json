@@ -644,5 +644,15 @@
     "local_path": "files/sources/deep_20261025T163813661089Z_17ff2b.txt",
     "sha256": "eabc47a2b5f77d04856b08be6b45b4482ea77af5ec269de6abd5e7faeffdbc88",
     "address_or_relative_path": "http://b1819042025kaluga.host1840592.hostland.pro/SEG019.HTM"
+  },
+  {
+    "source_id": "deep_20261101T145325899866Z_56cbfd",
+    "kind": "JUDGES_DETAILS",
+    "status": "Опубликованный судейский PDF; сверено с итоговым табло",
+    "checked_at": "2026-11-01T15:00:21.960962+00:00",
+    "why_it_matters": "Обнинск 01.11.2026; Милана на стр.3: 21,60 = 5,60 + 16,00; 7/9.",
+    "local_path": "files/protocols/2026-11-01_autumn-inspiration.pdf",
+    "sha256": "24a18fe361a32b400eb170fad854fa0d0ec4c57f9109db8e701369ebd2df269b",
+    "address_or_relative_path": "https://skating-vision.online/events/2627/obn11/2-e__Scores.pdf"
   }
 ]
