@@ -674,5 +674,15 @@
     "local_path": "files/sources/deep_20261119T074150868889Z_284a07.txt",
     "sha256": "fa1f7b198262a0b2fd7eb95eceb34e4ac56b1dd87e5707c2df6c419503b11c18",
     "address_or_relative_path": "http://d1920112026kaluga.host1840592.hostland.pro/SEG013.HTM"
+  },
+  {
+    "source_id": "deep_20261119T131403968111Z_93b416",
+    "kind": "JUDGES_DETAILS",
+    "status": "Опубликованный судейский протокол",
+    "checked_at": "2026-11-19T13:14:03.968111+00:00",
+    "why_it_matters": "Калуга, 19 ноября. Милана — стр. 2, средний блок, старт № 7. Семь элементов, три компонента и снижение за время.",
+    "local_path": "files/protocols/2026-11-19_kaluga-region.pdf",
+    "sha256": "f229c82ecdb6388eb0932f5b2592b90d4b9835ce8cc18e75f657ab247451386e",
+    "address_or_relative_path": "http://d1920112026kaluga.host1840592.hostland.pro/2_FS_Scores.pdf"
   }
 ]
