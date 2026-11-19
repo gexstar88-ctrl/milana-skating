@@ -654,5 +654,25 @@
     "local_path": "files/protocols/2026-11-01_autumn-inspiration.pdf",
     "sha256": "24a18fe361a32b400eb170fad854fa0d0ec4c57f9109db8e701369ebd2df269b",
     "address_or_relative_path": "https://skating-vision.online/events/2627/obn11/2-e__Scores.pdf"
+  },
+  {
+    "source_id": "deep_20261119T103439877980Z_859617",
+    "kind": "PROVISIONAL",
+    "status": "Калуга, 19.11.2026. Онлайн-табло произвольной программы, 14 строк. Милана — строка 5.",
+    "checked_at": "2026-11-19T10:34:39.877980+00:00",
+    "why_it_matters": "Калуга, 19.11.2026. Онлайн-табло произвольной программы, 14 строк. Милана — строка 5.",
+    "local_path": "files/sources/deep_20261119T103439877980Z_859617.txt",
+    "sha256": "d34f7660c077ed7948413f607e20d894dff4747f66d73d2ce85f0fcca3fc92ee",
+    "address_or_relative_path": "http://d1920112026kaluga.host1840592.hostland.pro/SEG013.HTM"
+  },
+  {
+    "source_id": "deep_20261119T074150868889Z_284a07",
+    "kind": "START_LIST",
+    "status": "Калуга, 19.11.2026. Стартовый порядок категории. Милана — старт № 7, первая разминка.",
+    "checked_at": "2026-11-19T07:41:50.868889+00:00",
+    "why_it_matters": "Калуга, 19.11.2026. Стартовый порядок категории. Милана — старт № 7, первая разминка.",
+    "local_path": "files/sources/deep_20261119T074150868889Z_284a07.txt",
+    "sha256": "fa1f7b198262a0b2fd7eb95eceb34e4ac56b1dd87e5707c2df6c419503b11c18",
+    "address_or_relative_path": "http://d1920112026kaluga.host1840592.hostland.pro/SEG013.HTM"
   }
 ]
