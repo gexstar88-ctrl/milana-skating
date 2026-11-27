@@ -694,5 +694,45 @@
     "local_path": "files/photos/AW-021.webp",
     "sha256": "3462cae1d74eece100f9af67f3ff68d5c632d358669440d6184fbecafc5275f1",
     "address_or_relative_path": null
+  },
+  {
+    "source_id": "zarechye_20261127_start_pdf",
+    "kind": "START_LIST",
+    "status": "Стартовый лист, 2-й юношеский разряд",
+    "checked_at": "2026-11-27T05:46:06.026+00:00",
+    "why_it_matters": "Заречье, 27 ноября. Заявка Миланы; PDF, стр. 1.",
+    "local_path": "files/sources/zarechye_20261127_start_pdf.txt",
+    "sha256": "e2a8e0f362a8364ed38483c486618942d246893ad584ce5db8f44f368c67c80f",
+    "address_or_relative_path": "https://onlineresults.ru/2026-2027/2026-11-27_bal/start-list-2-%D1%8E%D0%BD%D0%BE%D1%88%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D0%B0%D0%B7%D1%80%D1%8F%D0%B4-%D0%B4%D0%B5%D0%B2%D0%BE%D1%87%D0%BA%D0%B8-%D0%B8-%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B8-c12-%D0%BF%D0%BF.pdf"
+  },
+  {
+    "source_id": "zarechye_20261127_judges",
+    "kind": "JUDGES_DETAILS",
+    "status": "Судейские оценки Миланы: стр. 1, стартовый № 1.",
+    "checked_at": "2026-11-27T06:29:44.400588+00:00",
+    "why_it_matters": "Судейские оценки Миланы: стр. 1, стартовый № 1.",
+    "local_path": "files/protocols/2026-11-27_royal-ball.pdf",
+    "sha256": "3db7871f8934d15c54d3d6ed0c7315b350159a1e15f4950fa9a3cf1dbc1752dc",
+    "address_or_relative_path": "https://onlineresults.ru/2026-2027/2026-11-27_bal/judges-scores-2-%D1%8E%D0%BD%D0%BE%D1%88%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D0%B0%D0%B7%D1%80%D1%8F%D0%B4-%D0%B4%D0%B5%D0%B2%D0%BE%D1%87%D0%BA%D0%B8-%D0%B8-%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B8-c27-%D0%BF%D0%BF.pdf"
+  },
+  {
+    "source_id": "zarechye_20261127_board",
+    "kind": "PROVISIONAL",
+    "status": "Снимок табло произвольной программы, отметка 09:27 МСК.",
+    "checked_at": "2026-11-27T06:29:44.400588+00:00",
+    "why_it_matters": "Снимок табло произвольной программы, отметка 09:27 МСК.",
+    "local_path": "files/sources/zarechye_20261127_board.txt",
+    "sha256": "b16270f845782f068ab870f85619306d6c34f2e1db92ea9ad5d56a01cbb4fb27",
+    "address_or_relative_path": "https://onlineresults.ru/2026-2027/2026-11-27_bal/SEG003.HTM"
+  },
+  {
+    "source_id": "zarechye_20261127_final",
+    "kind": "OFFICIAL_FINAL",
+    "status": "Опубликованные результаты разряда: одна участница.",
+    "checked_at": "2026-11-27T06:29:44.400588+00:00",
+    "why_it_matters": "Опубликованные результаты разряда: одна участница.",
+    "local_path": "files/sources/zarechye_20261127_final.txt",
+    "sha256": "412f5ec3faa3ea47a0d0b29b7ffc7c0f09f6827ef6d04a6361f2011a42cba75d",
+    "address_or_relative_path": "https://onlineresults.ru/2026-2027/2026-11-27_bal/CAT003RS.HTM"
   }
 ]
