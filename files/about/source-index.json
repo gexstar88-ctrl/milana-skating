@@ -734,5 +734,25 @@
     "local_path": "files/sources/zarechye_20261127_final.txt",
     "sha256": "412f5ec3faa3ea47a0d0b29b7ffc7c0f09f6827ef6d04a6361f2011a42cba75d",
     "address_or_relative_path": "https://onlineresults.ru/2026-2027/2026-11-27_bal/CAT003RS.HTM"
+  },
+  {
+    "source_id": "award_photo_022_230bac72d3b9",
+    "kind": "AWARD_PHOTO",
+    "status": "Семейная фотография награды",
+    "checked_at": "2026-11-27T08:46:29.286664+00:00",
+    "why_it_matters": "Медаль «Королевский бал на льду» · Заречье, 27 ноября 2026",
+    "local_path": "files/photos/AW-022.webp",
+    "sha256": "1cf92d4b5d44992bf44da95508f3f61188b04b7e3e185e423772c97de744b70f",
+    "address_or_relative_path": null
+  },
+  {
+    "source_id": "award_photo_023_c1b2d88739ff",
+    "kind": "AWARD_PHOTO",
+    "status": "Семейная фотография награды",
+    "checked_at": "2026-11-27T08:46:29.286664+00:00",
+    "why_it_matters": "Кубок «Спорт для всех» · Заречье · Заречье, 27 ноября 2026",
+    "local_path": "files/photos/AW-023.webp",
+    "sha256": "23337285562a4c61e81ea2a84832a141e05ec0c6d5be2c1b05394398fde3d219",
+    "address_or_relative_path": null
   }
 ]
