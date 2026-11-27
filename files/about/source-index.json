@@ -684,5 +684,15 @@
     "local_path": "files/protocols/2026-11-19_kaluga-region.pdf",
     "sha256": "f229c82ecdb6388eb0932f5b2592b90d4b9835ce8cc18e75f657ab247451386e",
     "address_or_relative_path": "http://d1920112026kaluga.host1840592.hostland.pro/2_FS_Scores.pdf"
+  },
+  {
+    "source_id": "award_photo_021_ec7c03753803",
+    "kind": "AWARD_PHOTO",
+    "status": "Семейная фотография кубка. Турнир подтверждён надписью и протоколом.",
+    "checked_at": "2026-11-27T05:41:04.959311+00:00",
+    "why_it_matters": "Первенство Калужской области, Калуга, 19–20 ноября 2026 года. Фотография подтверждает надпись на кубке.",
+    "local_path": "files/photos/AW-021.webp",
+    "sha256": "3462cae1d74eece100f9af67f3ff68d5c632d358669440d6184fbecafc5275f1",
+    "address_or_relative_path": null
   }
 ]
